@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f8f1e9">
+  <title>The Quiet Guide — Spirit Connection Journal</title>
+  <style>
+    :root{
+      --paper:#fffaf4;--cream:#f8efe5;--blush:#f4ddd6;--rose:#d8a99b;
+      --clay:#ad7867;--gold:#bd8d48;--gold-soft:#e4c99c;--plum:#503b47;
+      --ink:#453c3a;--muted:#806f68;--white:#fffefd;--green:#6f8068;
+      --danger:#9d5a55;--line:rgba(147,112,88,.22);--shadow:0 20px 60px rgba(92,63,48,.10);
+      --serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(145deg,#fffdf9 0%,#f8eee5 55%,#fffaf4 100%);color:var(--ink);font:16px/1.55 var(--sans);min-height:100vh}
+    button,input,textarea,select{font:inherit;color:inherit}button{cursor:pointer}.app{min-height:100vh}
+    .sidebar{position:fixed;inset:0 auto 0 0;width:250px;padding:28px 18px;background:rgba(255,250,244,.94);backdrop-filter:blur(18px);border-right:1px solid var(--line);z-index:20}
+    .brand{display:flex;gap:12px;align-items:center;padding:0 10px 24px}.brand-mark{width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font:24px var(--serif);box-shadow:0 0 0 6px rgba(189,141,72,.07)}
+    .brand strong{display:block;font:22px/1 var(--serif);font-weight:normal}.brand small,.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:var(--gold)}
+    nav{display:grid;gap:6px}.nav-btn{border:0;background:transparent;border-radius:14px;padding:12px 14px;text-align:left;display:flex;gap:12px;align-items:center;color:var(--muted)}
+    .nav-btn:hover,.nav-btn.active{background:linear-gradient(90deg,rgba(244,221,214,.75),rgba(255,255,255,.4));color:var(--plum)}.nav-btn.active{box-shadow:inset 2px 0 var(--gold)}
+    .side-note{position:absolute;bottom:24px;left:24px;right:24px;font:italic 13px/1.5 var(--serif);color:var(--muted)}
+    main{margin-left:250px;padding:28px 4vw 100px;max-width:1500px}.view{display:none;animation:fade .25s ease}.view.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(5px)}}
+    .hero{min-height:510px;border-radius:30px;overflow:hidden;position:relative;background:#e9d6c7 var(--hero) center 36%/cover no-repeat;box-shadow:var(--shadow);display:flex;align-items:flex-end}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(61,43,40,.58) 0%,rgba(61,43,40,.22) 48%,rgba(255,250,244,.03) 75%),linear-gradient(0deg,rgba(56,38,35,.4),transparent 48%)}
+    .hero-copy{position:relative;z-index:1;color:#fff;padding:55px;max-width:620px;text-shadow:0 2px 18px rgba(60,35,25,.35)}h1,h2,h3{font-family:var(--serif);font-weight:normal;color:var(--plum);line-height:1.12}
+    .hero h1{font-size:clamp(44px,6vw,82px);color:#fff;margin:8px 0 6px}.hero-byline{display:block;margin-bottom:16px;color:#f5dcb2;font:12px/1.4 var(--sans);font-weight:650;text-transform:uppercase;letter-spacing:.2em}.hero p{font:italic 20px/1.5 var(--serif);max-width:520px}
+    .btn{border:1px solid transparent;border-radius:999px;padding:12px 20px;background:var(--plum);color:#fff;box-shadow:0 8px 20px rgba(80,59,71,.16)}.btn:hover{transform:translateY(-1px)}.btn.gold{background:linear-gradient(135deg,#c69a56,#a87938)}.btn.ghost{background:rgba(255,255,255,.82);color:var(--plum);border-color:var(--line);box-shadow:none}.btn.danger{background:var(--danger)}.actions{display:flex;gap:10px;flex-wrap:wrap}
+    .hero .actions{margin-top:24px}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin:42px 0 18px}.section-head h2{font-size:clamp(32px,4vw,50px);margin:5px 0}.section-head p{color:var(--muted);max-width:560px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{background:rgba(255,254,253,.86);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 12px 36px rgba(87,59,45,.06)}.card h3{font-size:24px;margin:4px 0 12px}.span-3{grid-column:span 3}.span-4{grid-column:span 4}.span-5{grid-column:span 5}.span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-8{grid-column:span 8}.span-12{grid-column:span 12}
+    .stat{font:42px var(--serif);color:var(--gold)}.muted{color:var(--muted)}.practice-card{background:linear-gradient(145deg,#fff9f2,#f3dfd7);position:relative;overflow:hidden}.practice-card:after{content:"✦";position:absolute;right:-12px;top:-38px;font:150px var(--serif);color:rgba(189,141,72,.09)}
+    .steps{counter-reset:s;display:grid;gap:12px;margin:18px 0}.step{display:flex;gap:12px;align-items:center}.step:before{counter-increment:s;content:counter(s);width:28px;height:28px;flex:none;border:1px solid var(--gold-soft);border-radius:50%;display:grid;place-items:center;color:var(--gold);font:14px var(--serif)}
+    .quote{font:italic 22px/1.55 var(--serif);color:var(--plum);padding:12px 0}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid var(--gold-soft);background:#fff8ef;border-radius:999px;padding:7px 11px;font-size:13px;color:var(--clay)}
+    .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}label,.label{font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+    input,textarea,select{width:100%;border:1px solid var(--line);border-radius:13px;background:rgba(255,253,249,.92);padding:12px 14px;outline:none}textarea{min-height:110px;resize:vertical}input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(189,141,72,.13)}
+    .impression{border-left:3px solid var(--gold);background:linear-gradient(90deg,#fff7e9,#fff)}.interpretation{border-left:3px solid var(--rose);background:linear-gradient(90deg,#fcefeb,#fff)}.helper{font:italic 14px var(--serif);color:var(--muted)}
+    .entry-list{display:grid;gap:12px}.entry{border:1px solid var(--line);border-radius:17px;padding:16px;background:rgba(255,255,255,.72);display:grid;grid-template-columns:1fr auto;gap:12px}.entry h3{font-size:20px;margin:0}.entry p{margin:6px 0}.entry-actions{display:flex;gap:6px;align-items:start}.icon-btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px}
+    .image-card{min-height:430px;background:var(--image) center/cover;border-radius:24px;position:relative;overflow:hidden}.image-card:after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(53,37,34,.55))}
+    .image-caption{position:absolute;bottom:25px;left:25px;right:25px;color:#fff;z-index:1;font:italic 20px var(--serif)}
+    .bars{display:grid;gap:13px}.bar-row{display:grid;grid-template-columns:120px 1fr 34px;gap:10px;align-items:center;font-size:13px}.bar{height:9px;background:#f0e5dc;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--rose),var(--gold));border-radius:inherit}
+    .quiz-option{display:flex;gap:8px;justify-content:space-between}.quiz-option label{flex:1;text-align:center}.quiz-option input{width:auto}.resource{display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+    .modal{position:fixed;inset:0;background:rgba(43,31,29,.5);z-index:50;display:none;place-items:center;padding:20px}.modal.open{display:grid}.modal-card{background:var(--paper);width:min(650px,100%);max-height:90vh;overflow:auto;border-radius:26px;padding:28px;box-shadow:0 30px 90px rgba(40,25,20,.3)}
+    .toast{position:fixed;right:24px;bottom:24px;background:var(--plum);color:#fff;padding:12px 18px;border-radius:14px;z-index:80;opacity:0;transform:translateY(20px);pointer-events:none}.toast.show{opacity:1;transform:none}
+    .mobile-nav{display:none}.empty{text-align:center;padding:36px;color:var(--muted)}.search-row{display:flex;gap:10px;margin-bottom:16px}.search-row input{flex:1}
+    @media(max-width:1000px){.span-3,.span-4{grid-column:span 6}.span-5,.span-7{grid-column:span 12}.hero-copy{padding:38px}.hero{min-height:470px}}
+    @media(max-width:760px){.sidebar{display:none}main{margin:0;padding:14px 14px 96px}.mobile-nav{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;z-index:30;bottom:0;left:0;right:0;padding:8px max(8px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));background:rgba(255,250,244,.96);border-top:1px solid var(--line);backdrop-filter:blur(14px)}.mobile-nav button{border:0;background:transparent;padding:8px 2px;font-size:11px;color:var(--muted)}.mobile-nav button.active{color:var(--plum)}.hero{min-height:560px;border-radius:22px;background-position:57% center}.hero:before{background:linear-gradient(0deg,rgba(50,34,31,.72),rgba(50,34,31,.02) 72%)}.hero-copy{padding:28px 22px}.hero h1{font-size:47px}.hero p{font-size:17px}.grid{gap:12px}.span-3,.span-4,.span-5,.span-6,.span-7,.span-8,.span-12{grid-column:span 12}.form-grid{grid-template-columns:1fr}.card{padding:19px;border-radius:18px}.section-head{align-items:start;flex-direction:column;margin-top:30px}.section-head h2{font-size:38px}.image-card{min-height:420px}.bar-row{grid-template-columns:92px 1fr 26px}.modal{align-items:end;padding:0}.modal-card{border-radius:24px 24px 0 0;max-height:92vh}.search-row{flex-direction:column}.entry{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">✦</div><div><strong>The Quiet Guide</strong><small>Connection journal</small></div></div>
+    <nav id="desktopNav">
+      <button class="nav-btn active" data-view="today">◌ <span>Today</span></button>
+      <button class="nav-btn" data-view="journal">✎ <span>Journal</span></button>
+      <button class="nav-btn" data-view="patterns">✦ <span>Patterns</span></button>
+      <button class="nav-btn" data-view="quiz">◎ <span>Sensing Quiz</span></button>
+      <button class="nav-btn" data-view="library">▤ <span>Library</span></button>
+      <button class="nav-btn" data-view="events">◇ <span>Events</span></button>
+      <button class="nav-btn" data-view="guides">☼ <span>Guide Team</span></button>
+      <button class="nav-btn" data-view="settings">⚙ <span>Backup & Settings</span></button>
+    </nav>
+    <p class="side-note">“Notice gently. Record honestly. Trust what repeats.”</p>
+  </aside>
+
+  <main>
+    <section class="view active" id="today">
+      <div class="hero" style="--hero:url('assets/quiet-guide-hero.png')">
+        <div class="hero-copy"><span class="eyebrow" style="color:#f5dcb2">Your private practice space</span><h1>Welcome to the Quiet Guide</h1><span class="hero-byline">by Connecting Souls</span><p>Take five quiet minutes to notice what arrives—without forcing, proving, or judging.</p><div class="actions"><button class="btn gold" id="beginPractice">Begin today’s practice</button><button class="btn ghost" data-go="journal">Write a quick note</button></div></div>
+      </div>
+      <div class="grid" style="margin-top:18px">
+        <div class="card span-3"><span class="eyebrow">Current rhythm</span><div class="stat" id="streakStat">0</div><div class="muted">day practice streak</div></div>
+        <div class="card span-3"><span class="eyebrow">Your journal</span><div class="stat" id="entryStat">0</div><div class="muted">experiences recorded</div></div>
+        <div class="card span-6 practice-card"><span class="eyebrow">Today’s invitation</span><div class="quote" id="dailyPrompt"></div></div>
+      </div>
+      <div class="section-head"><div><span class="eyebrow">A gentle ritual</span><h2>Five minutes a day</h2></div><p>Begin grounded, ask one simple question, and write the first thing you notice before interpretation takes over.</p></div>
+      <div class="grid">
+        <div class="card span-7"><div class="steps"><div class="step">Sit quietly and settle your breathing.</div><div class="step">Ground your attention in the present moment.</div><div class="step">Set a clear, supportive intention.</div><div class="step">Ask one simple question.</div><div class="step">Notice the first image, word, feeling, or sensation.</div><div class="step">Write it down without analysing it.</div></div></div>
+        <div class="image-card span-5" style="--image:url('assets/heart-light.png')"><div class="image-caption">Your first impression may be quiet, simple, and unexpectedly ordinary.</div></div>
+      </div>
+      <div class="section-head"><div><span class="eyebrow">Recently</span><h2>Your latest reflections</h2></div><button class="btn ghost" data-go="journal">View journal</button></div>
+      <div class="entry-list" id="recentEntries"></div>
+    </section>
+
+    <section class="view" id="journal">
+      <div class="section-head"><div><span class="eyebrow">Private reflections</span><h2>Connection journal</h2></div><button class="btn gold" id="newEntry">New entry</button></div>
+      <div class="card">
+        <div class="search-row"><input id="entrySearch" type="search" placeholder="Search impressions, symbols, tags…"><select id="entryFilter"><option value="">All sensing styles</option><option>Visual</option><option>Auditory</option><option>Emotional</option><option>Physical</option><option>Knowing</option><option>Dream</option><option>Other</option></select></div>
+        <div class="entry-list" id="entryList"></div>
+      </div>
+    </section>
+
+    <section class="view" id="patterns">
+      <div class="section-head"><div><span class="eyebrow">Personal language</span><h2>Patterns over time</h2></div><p>These are repetitions in your own notes—not proof or fixed interpretations.</p></div>
+      <div class="grid"><div class="card span-4"><span class="eyebrow">This month</span><div class="stat" id="monthStat">0</div><div class="muted">journal entries</div></div><div class="card span-8"><span class="eyebrow">Sensing channels</span><div class="bars" id="channelBars"></div></div><div class="card span-6"><span class="eyebrow">Repeating words & tags</span><div class="chips" id="repeatChips" style="margin-top:18px"></div></div><div class="card span-6"><span class="eyebrow">Reflection</span><p class="quote">A pattern becomes useful when it helps you ask a better question—not when it rushes you toward certainty.</p></div></div>
+    </section>
+
+    <section class="view" id="quiz">
+      <div class="section-head"><div><span class="eyebrow">Self reflection</span><h2>How do you tend to sense?</h2></div><p>A gentle exercise, not a diagnostic or scientific assessment.</p></div>
+      <form class="card" id="quizForm"><div id="quizQuestions"></div><div class="actions" style="margin-top:24px"><button class="btn gold">See my reflection</button><button class="btn ghost" type="reset">Reset</button></div></form>
+      <div class="card" id="quizResult" style="display:none;margin-top:18px"></div>
+    </section>
+
+    <section class="view" id="library">
+      <div class="section-head"><div><span class="eyebrow">Learn & explore</span><h2>Your resource library</h2></div><button class="btn gold" data-modal="resourceModal">Add resource</button></div>
+      <div class="card"><div class="search-row"><input id="resourceSearch" type="search" placeholder="Search books, videos, social media, websites…"><select id="resourceType"><option value="">All types</option><option>Book</option><option>Video</option><option>Course</option><option>Social media</option><option>Website</option></select></div><div id="resourceList"></div></div>
+    </section>
+
+    <section class="view" id="events">
+      <div class="section-head"><div><span class="eyebrow">What’s ahead</span><h2>Events & gatherings</h2></div><button class="btn gold" data-modal="eventModal">Add event</button></div>
+      <div class="grid"><div class="card span-8"><h3>Upcoming</h3><div id="upcomingEvents"></div></div><div class="card span-4 practice-card"><span class="eyebrow">Prepare gently</span><p class="quote">What would help you arrive grounded, curious, and open?</p></div></div>
+    </section>
+
+    <section class="view" id="guides">
+      <div class="section-head"><div><span class="eyebrow">Optional reflective labels</span><h2>Your guide team</h2></div><button class="btn gold" data-modal="guideModal">Add profile</button></div>
+      <div class="grid"><div class="image-card span-5" style="--image:url('assets/guide-team.png')"><div class="image-caption">Notice how a presence is experienced: a feeling, symbol, colour, word, or quiet knowing.</div></div><div class="card span-7"><p class="helper">These profiles are personal reflection tools. Names and categories are optional—not verified identities.</p><div id="guideList"></div></div></div>
+    </section>
+
+    <section class="view" id="settings">
+      <div class="section-head"><div><span class="eyebrow">Privacy & care</span><h2>Backup your journal</h2></div></div>
+      <div class="grid">
+        <div class="card span-6"><span class="eyebrow">Recommended private backup</span><h3>Encrypted Quiet Guide Backup</h3><p>Save everything in a password-protected <code>.quietguide</code> file. This can restore journal entries, resources, events, guide profiles, and quiz results.</p><p class="helper">Your password is never stored. If it is forgotten, the encrypted backup cannot be recovered.</p><div class="actions"><button class="btn gold" id="exportEncrypted">Create encrypted backup</button><label class="btn ghost" for="importEncrypted">Restore encrypted backup</label><input id="importEncrypted" type="file" accept=".quietguide,application/octet-stream" hidden></div></div>
+        <div class="card span-6"><span class="eyebrow">Readable archive</span><h3>Journal HTML Export</h3><p>Create a beautifully formatted, standalone web page containing your journal entries. Open it in any browser or print it to PDF.</p><p class="helper">This is for reading and printing only; it cannot restore the app’s other data.</p><button class="btn gold" id="exportJournalHtml">Export readable journal</button></div>
+        <div class="card span-6"><h3>Standard JSON backup</h3><p>Entries are saved in this browser on this device. JSON remains available as an unencrypted compatibility backup.</p><div class="actions"><button class="btn ghost" id="exportData">Export JSON</button><label class="btn ghost" for="importData">Import JSON</label><input id="importData" type="file" accept=".json,application/json" hidden></div></div>
+        <div class="card span-6"><h3>A grounded reminder</h3><p>This journal supports personal reflection. It is not medical or mental-health advice. Pause and seek appropriate support if experiences become frightening, distressing, or disruptive to daily life.</p></div>
+        <div class="card span-12"><h3>Clear local data</h3><p class="muted">This permanently removes journal entries, resources, events, guide profiles, and quiz results from this browser.</p><button class="btn danger" id="clearData">Clear all data</button></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="mobile-nav"><button class="active" data-view="today">◌<br>Today</button><button data-view="journal">✎<br>Journal</button><button data-view="patterns">✦<br>Patterns</button><button data-view="settings">•••<br>More</button></nav>
+</div>
+
+<div class="modal" id="entryModal" role="dialog" aria-modal="true" aria-labelledby="entryTitle"><div class="modal-card"><div class="section-head" style="margin-top:0"><div><span class="eyebrow">Capture first, interpret second</span><h2 id="entryTitle">Journal entry</h2></div><button class="icon-btn close-modal" aria-label="Close">×</button></div><form id="entryForm" class="form-grid">
+  <input type="hidden" id="entryId"><div class="field"><label for="entryDate">Date</label><input id="entryDate" type="date" required></div><div class="field"><label for="entryTime">Time</label><input id="entryTime" type="time"></div><div class="field full"><label for="entryName">Optional title</label><input id="entryName" placeholder="A quiet morning impression"></div><div class="field"><label for="practiceType">Practice type</label><select id="practiceType"><option>Meditation</option><option>Reading</option><option>Dream</option><option>Spontaneous impression</option><option>Nature</option><option>Synchronicity</option></select></div><div class="field"><label for="sensing">Primary sensing channel</label><select id="sensing"><option>Visual</option><option>Auditory</option><option>Emotional</option><option>Physical</option><option>Knowing</option><option>Dream</option><option>Other</option></select></div><div class="field full"><label for="intention">Intention or question</label><textarea id="intention" placeholder="What would be supportive for me to notice today?"></textarea></div><div class="field full impression"><label for="firstImpression">Raw first impression</label><textarea id="firstImpression" required placeholder="The first image, word, emotion, colour, or sensation…"></textarea><span class="helper">Write before you explain it.</span></div><div class="field full"><label for="details">Sensory details</label><textarea id="details" placeholder="Colours, symbols, words, body location, temperature, sounds…"></textarea></div><div class="field full interpretation"><label for="interpretation">My personal interpretation</label><textarea id="interpretation" placeholder="What might this mean to me? It is okay not to know yet."></textarea></div><div class="field full"><label for="entryTags">Tags, separated by commas</label><input id="entryTags" placeholder="warmth, roses, blue light"></div><div class="field full actions"><button class="btn gold">Save entry</button><button type="button" class="btn ghost close-modal">Cancel</button></div>
+</form></div></div>
+
+<div class="modal" id="resourceModal"><div class="modal-card"><div class="section-head" style="margin-top:0"><h2>Add resource</h2><button class="icon-btn close-modal">×</button></div><form id="resourceForm" class="form-grid"><div class="field"><label>Type</label><select id="resType"><option>Book</option><option>Video</option><option>Course</option><option>Social media</option><option>Website</option></select></div><div class="field"><label>Status</label><select id="resStatus"><option>Want to explore</option><option>In progress</option><option>Completed</option></select></div><div class="field full"><label>Title</label><input id="resTitle" required></div><div class="field full"><label>Creator / author</label><input id="resCreator"></div><div class="field full"><label>Link</label><input id="resUrl" type="url"></div><div class="field full"><label>Notes</label><textarea id="resNotes"></textarea></div><button class="btn gold">Save resource</button></form></div></div>
+<div class="modal" id="eventModal"><div class="modal-card"><div class="section-head" style="margin-top:0"><h2>Add event</h2><button class="icon-btn close-modal">×</button></div><form id="eventForm" class="form-grid"><div class="field full"><label>Event name</label><input id="evName" required></div><div class="field"><label>Date</label><input id="evDate" type="date" required></div><div class="field"><label>Time</label><input id="evTime" type="time"></div><div class="field full"><label>Host / location</label><input id="evPlace"></div><div class="field full"><label>Preparation notes</label><textarea id="evNotes"></textarea></div><button class="btn gold">Save event</button></form></div></div>
+<div class="modal" id="guideModal"><div class="modal-card"><div class="section-head" style="margin-top:0"><h2>Add guide profile</h2><button class="icon-btn close-modal">×</button></div><form id="guideForm" class="form-grid"><div class="field"><label>Nickname or label</label><input id="guideName" required></div><div class="field"><label>Reflective type</label><select id="guideType"><option>Unknown</option><option>Teacher</option><option>Healing</option><option>Creative</option><option>Ancestral</option><option>Nature</option><option>Gatekeeper</option><option>Master</option><option>Joy</option><option>Temporary</option><option>Protector</option></select></div><div class="field full"><label>How this presence is noticed</label><textarea id="guideSigns" placeholder="Warmth, a colour, a recurring word or symbol…"></textarea></div><div class="field full"><label>Notes</label><textarea id="guideNotes"></textarea></div><button class="btn gold">Save profile</button></form></div></div>
+<div class="toast" id="toast" aria-live="polite"></div>
+
+<script>
+(()=>{
+  const KEY="quietGuideDataV1";
+  const blank=()=>({entries:[],resources:[],events:[],guides:[],quizResults:[]});
+  let data;
+  try{data=JSON.parse(localStorage.getItem(KEY))||blank()}catch{data=blank()}
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  const uid=()=>crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random().toString(16).slice(2);
+  const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const save=()=>localStorage.setItem(KEY,JSON.stringify(data));
+  const toast=m=>{const t=$("#toast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2200)};
+  const today=()=>new Date().toISOString().slice(0,10);
+  const showView=id=>{$$(".view").forEach(v=>v.classList.toggle("active",v.id===id));$$("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===id));history.replaceState(null,"","#"+id);window.scrollTo(0,0);render()};
+  $$("[data-view]").forEach(b=>b.onclick=()=>showView(b.dataset.view));$$("[data-go]").forEach(b=>b.onclick=()=>showView(b.dataset.go));
+  const openModal=id=>{$("#"+id).classList.add("open");setTimeout(()=>$("#"+id).querySelector("input,select,textarea,button")?.focus(),20)};
+  $$("[data-modal]").forEach(b=>b.onclick=()=>openModal(b.dataset.modal));$$(".close-modal").forEach(b=>b.onclick=()=>b.closest(".modal").classList.remove("open"));$$(".modal").forEach(m=>m.onclick=e=>{if(e.target===m)m.classList.remove("open")});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")$$(".modal.open").forEach(m=>m.classList.remove("open"))});
+  const prompts=["What was the very first image, word, feeling, or bodily sensation?","What changed when you stopped trying to find an answer?","Did anything repeat from an earlier entry?","Where did you feel the impression in your body?","What felt calm, simple, or unexpectedly ordinary?"];
+  $("#dailyPrompt").textContent=prompts[new Date().getDate()%prompts.length];
+  function streak(){const days=[...new Set(data.entries.map(e=>e.date))].sort().reverse();let n=0,d=new Date();for(const day of days){const s=d.toISOString().slice(0,10);if(day===s){n++;d.setDate(d.getDate()-1)}else if(n===0){d.setDate(d.getDate()-1);if(day===d.toISOString().slice(0,10)){n++;d.setDate(d.getDate()-1)}else break}else break}return n}
+  function renderEntries(target,items){const el=$(target);if(!items.length){el.innerHTML='<div class="empty">Your first quiet observation can begin here.</div>';return}el.innerHTML=items.map(e=>`<article class="entry"><div><span class="eyebrow">${esc(e.date)} · ${esc(e.sensing)}</span><h3>${esc(e.title||e.type)}</h3><p>${esc(e.impression)}</p><div class="chips">${(e.tags||[]).map(t=>`<span class="chip">${esc(t)}</span>`).join("")}</div></div><div class="entry-actions"><button class="icon-btn edit-entry" data-id="${e.id}" aria-label="Edit">✎</button><button class="icon-btn delete-entry" data-id="${e.id}" aria-label="Delete">×</button></div></article>`).join("");el.querySelectorAll(".edit-entry").forEach(b=>b.onclick=()=>editEntry(b.dataset.id));el.querySelectorAll(".delete-entry").forEach(b=>b.onclick=()=>{if(confirm("Delete this journal entry?")){data.entries=data.entries.filter(e=>e.id!==b.dataset.id);save();render();toast("Entry deleted")}})}
+  function render(){
+    $("#entryStat").textContent=data.entries.length;$("#streakStat").textContent=streak();
+    const sorted=[...data.entries].sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time));
+    renderEntries("#recentEntries",sorted.slice(0,3));
+    const q=$("#entrySearch").value.toLowerCase(),f=$("#entryFilter").value;
+    renderEntries("#entryList",sorted.filter(e=>(!q||JSON.stringify(e).toLowerCase().includes(q))&&(!f||e.sensing===f)));
+    const now=new Date(),month=now.toISOString().slice(0,7);$("#monthStat").textContent=data.entries.filter(e=>e.date.startsWith(month)).length;
+    const channels=["Visual","Auditory","Emotional","Physical","Knowing","Dream","Other"],counts=Object.fromEntries(channels.map(c=>[c,data.entries.filter(e=>e.sensing===c).length])),max=Math.max(1,...Object.values(counts));
+    $("#channelBars").innerHTML=channels.map(c=>`<div class="bar-row"><span>${c}</span><div class="bar"><i style="width:${counts[c]/max*100}%"></i></div><b>${counts[c]}</b></div>`).join("");
+    const tags={};data.entries.flatMap(e=>e.tags||[]).forEach(t=>tags[t]=(tags[t]||0)+1);const repeats=Object.entries(tags).filter(([,n])=>n>1).sort((a,b)=>b[1]-a[1]);
+    $("#repeatChips").innerHTML=repeats.length?repeats.map(([t,n])=>`<span class="chip">${esc(t)} · ${n}</span>`).join(""):'<span class="muted">Patterns will appear after something is recorded more than once.</span>';
+    renderResources();renderEvents();renderGuides();
+  }
+  $("#entrySearch").oninput=render;$("#entryFilter").onchange=render;$("#resourceSearch").oninput=render;$("#resourceType").onchange=render;
+  $("#newEntry").onclick=$("#beginPractice").onclick=()=>{resetEntry();openModal("entryModal")};
+  function resetEntry(){$("#entryForm").reset();$("#entryId").value="";$("#entryDate").value=today();$("#entryTime").value=new Date().toTimeString().slice(0,5)}
+  function editEntry(id){const e=data.entries.find(x=>x.id===id);if(!e)return;$("#entryId").value=e.id;$("#entryDate").value=e.date;$("#entryTime").value=e.time;$("#entryName").value=e.title;$("#practiceType").value=e.type;$("#sensing").value=e.sensing;$("#intention").value=e.intention;$("#firstImpression").value=e.impression;$("#details").value=e.details;$("#interpretation").value=e.interpretation;$("#entryTags").value=(e.tags||[]).join(", ");openModal("entryModal")}
+  $("#entryForm").onsubmit=e=>{e.preventDefault();const id=$("#entryId").value||uid(),old=data.entries.find(x=>x.id===id);const item={id,date:$("#entryDate").value,time:$("#entryTime").value,title:$("#entryName").value.trim(),type:$("#practiceType").value,sensing:$("#sensing").value,intention:$("#intention").value.trim(),impression:$("#firstImpression").value.trim(),details:$("#details").value.trim(),interpretation:$("#interpretation").value.trim(),tags:$("#entryTags").value.split(",").map(x=>x.trim().toLowerCase()).filter(Boolean),createdAt:old?.createdAt||new Date().toISOString(),updatedAt:new Date().toISOString()};data.entries=old?data.entries.map(x=>x.id===id?item:x):[item,...data.entries];save();$(".modal.open").classList.remove("open");render();toast("Saved locally")};
+  function renderResources(){const q=$("#resourceSearch").value.toLowerCase(),f=$("#resourceType").value,items=data.resources.filter(r=>(!q||JSON.stringify(r).toLowerCase().includes(q))&&(!f||r.type===f));$("#resourceList").innerHTML=items.length?items.map(r=>`<div class="resource"><div><span class="eyebrow">${esc(r.type)} · ${esc(r.status)}</span><h3>${esc(r.title)}</h3><p class="muted">${esc(r.creator)} ${r.notes?"— "+esc(r.notes):""}</p></div><button class="icon-btn remove-resource" data-id="${r.id}">×</button></div>`).join(""):'<div class="empty">Save a book, video, course, social account, or website you want to explore.</div>';$$(".remove-resource").forEach(b=>b.onclick=()=>{data.resources=data.resources.filter(x=>x.id!==b.dataset.id);save();render()})}
+  $("#resourceForm").onsubmit=e=>{e.preventDefault();data.resources.unshift({id:uid(),type:$("#resType").value,status:$("#resStatus").value,title:$("#resTitle").value.trim(),creator:$("#resCreator").value.trim(),url:$("#resUrl").value,notes:$("#resNotes").value.trim()});save();e.target.reset();$(".modal.open").classList.remove("open");render();toast("Resource saved")};
+  function renderEvents(){const items=[...data.events].sort((a,b)=>a.date.localeCompare(b.date));$("#upcomingEvents").innerHTML=items.length?items.map(v=>`<div class="resource"><div><span class="eyebrow">${esc(v.date)} ${esc(v.time)}</span><h3>${esc(v.name)}</h3><p class="muted">${esc(v.place)} ${v.notes?"— "+esc(v.notes):""}</p></div><button class="icon-btn remove-event" data-id="${v.id}">×</button></div>`).join(""):'<div class="empty">No upcoming events yet.</div>';$$(".remove-event").forEach(b=>b.onclick=()=>{data.events=data.events.filter(x=>x.id!==b.dataset.id);save();render()})}
+  $("#eventForm").onsubmit=e=>{e.preventDefault();data.events.push({id:uid(),name:$("#evName").value.trim(),date:$("#evDate").value,time:$("#evTime").value,place:$("#evPlace").value.trim(),notes:$("#evNotes").value.trim()});save();e.target.reset();$(".modal.open").classList.remove("open");render();toast("Event saved")};
+  function renderGuides(){$("#guideList").innerHTML=data.guides.length?data.guides.map(g=>`<div class="resource"><div><span class="eyebrow">${esc(g.type)}</span><h3>${esc(g.name)}</h3><p>${esc(g.signs)}</p><p class="muted">${esc(g.notes)}</p></div><button class="icon-btn remove-guide" data-id="${g.id}">×</button></div>`).join(""):'<div class="empty">Add a profile only when a recurring presence or pattern feels useful to name.</div>';$$(".remove-guide").forEach(b=>b.onclick=()=>{data.guides=data.guides.filter(x=>x.id!==b.dataset.id);save();render()})}
+  $("#guideForm").onsubmit=e=>{e.preventDefault();data.guides.push({id:uid(),name:$("#guideName").value.trim(),type:$("#guideType").value,signs:$("#guideSigns").value.trim(),notes:$("#guideNotes").value.trim()});save();e.target.reset();$(".modal.open").classList.remove("open");render();toast("Profile saved")};
+  const questions=[["I naturally notice pictures, colours, or scenes in my mind.","Visual"],["Words or phrases seem to arrive fully formed.","Auditory"],["I quickly sense the emotional tone of a room.","Emotional"],["I notice tingles, warmth, pressure, or chills.","Physical"],["I sometimes know something without knowing how.","Knowing"],["Dreams and repeating symbols stay with me.","Dream"],["Visual details are easiest for me to recall.","Visual"],["Inner sounds, names, or music catch my attention.","Auditory"],["Other people’s feelings register strongly for me.","Emotional"],["My body reacts before my mind explains.","Physical"],["My first answer is often simple and immediate.","Knowing"],["Meaning often reaches me through metaphor.","Dream"]];
+  $("#quizQuestions").innerHTML=questions.map((q,i)=>`<fieldset style="border:0;border-bottom:1px solid var(--line);padding:18px 0"><legend>${i+1}. ${q[0]}</legend><div class="quiz-option">${[1,2,3,4,5].map(n=>`<label><input type="radio" name="q${i}" value="${n}" required><br>${n}</label>`).join("")}</div><small class="muted">Not like me ← → Very much like me</small></fieldset>`).join("");
+  $("#quizForm").onsubmit=e=>{e.preventDefault();const fd=new FormData(e.target),scores={Visual:0,Auditory:0,Emotional:0,Physical:0,Knowing:0,Dream:0};questions.forEach((q,i)=>scores[q[1]]+=+fd.get("q"+i));const ranked=Object.entries(scores).sort((a,b)=>b[1]-a[1]);data.quizResults.push({id:uid(),date:today(),scores});save();$("#quizResult").style.display="block";$("#quizResult").innerHTML=`<span class="eyebrow">Your strongest current tendencies</span><h2>${ranked[0][0]} & ${ranked[1][0]}</h2><p>This may help you choose practices that feel natural while staying open to every kind of impression.</p><div class="bars">${ranked.map(([k,v])=>`<div class="bar-row"><span>${k}</span><div class="bar"><i style="width:${v/10*100}%"></i></div><b>${v}</b></div>`).join("")}</div>`;$("#quizResult").scrollIntoView({behavior:"smooth"})};
+  const download=(content,name,type)=>{const blob=new Blob([content],{type}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)};
+  const backupPayload=()=>({schemaVersion:1,exportedAt:new Date().toISOString(),...data});
+  const bytesToBase64=bytes=>{let out="";bytes.forEach(b=>out+=String.fromCharCode(b));return btoa(out)};
+  const base64ToBytes=value=>Uint8Array.from(atob(value),c=>c.charCodeAt(0));
+  async function passwordKey(password,salt,usage){
+    const material=await crypto.subtle.importKey("raw",new TextEncoder().encode(password),"PBKDF2",false,["deriveKey"]);
+    return crypto.subtle.deriveKey({name:"PBKDF2",salt,iterations:250000,hash:"SHA-256"},material,{name:"AES-GCM",length:256},false,[usage]);
+  }
+  $("#exportEncrypted").onclick=async()=>{
+    if(!crypto.subtle){alert("Encrypted backups are not supported by this browser. Please use the JSON backup instead.");return}
+    const password=prompt("Create a password for this encrypted backup (at least 8 characters):");
+    if(password===null)return;
+    if(password.length<8){alert("Please use a password with at least 8 characters.");return}
+    const confirmPassword=prompt("Enter the password again:");
+    if(confirmPassword!==password){alert("The passwords did not match.");return}
+    try{
+      const salt=crypto.getRandomValues(new Uint8Array(16)),iv=crypto.getRandomValues(new Uint8Array(12));
+      const key=await passwordKey(password,salt,"encrypt");
+      const encrypted=await crypto.subtle.encrypt({name:"AES-GCM",iv},key,new TextEncoder().encode(JSON.stringify(backupPayload())));
+      const envelope={format:"quiet-guide-encrypted-backup",version:1,kdf:"PBKDF2-SHA256",iterations:250000,cipher:"AES-256-GCM",salt:bytesToBase64(salt),iv:bytesToBase64(iv),data:bytesToBase64(new Uint8Array(encrypted))};
+      download(JSON.stringify(envelope),"quiet-guide-"+today()+".quietguide","application/octet-stream");
+      toast("Encrypted backup created");
+    }catch{alert("The encrypted backup could not be created.")}
+  };
+  $("#importEncrypted").onchange=async e=>{
+    const file=e.target.files[0];if(!file)return;
+    const password=prompt("Enter the password for this Quiet Guide backup:");
+    if(password===null){e.target.value="";return}
+    try{
+      const envelope=JSON.parse(await file.text());
+      if(envelope.format!=="quiet-guide-encrypted-backup"||envelope.version!==1)throw Error();
+      const salt=base64ToBytes(envelope.salt),iv=base64ToBytes(envelope.iv);
+      const key=await passwordKey(password,salt,"decrypt");
+      const decrypted=await crypto.subtle.decrypt({name:"AES-GCM",iv},key,base64ToBytes(envelope.data));
+      const imported=JSON.parse(new TextDecoder().decode(decrypted));
+      if(!Array.isArray(imported.entries))throw Error();
+      if(confirm("Restore this encrypted backup and replace the current local journal?")){
+        data={entries:imported.entries||[],resources:imported.resources||[],events:imported.events||[],guides:imported.guides||[],quizResults:imported.quizResults||[]};save();render();toast("Encrypted backup restored");
+      }
+    }catch{alert("The backup could not be opened. Check the file and password.")}
+    e.target.value="";
+  };
+  $("#exportJournalHtml").onclick=()=>{
+    const entries=[...data.entries].sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time));
+    const cards=entries.length?entries.map(e=>`<article><p class="meta">${esc(e.date)} ${esc(e.time||"")} · ${esc(e.type||"")} · ${esc(e.sensing||"")}</p><h2>${esc(e.title||"Journal reflection")}</h2>${e.intention?`<h3>Intention or question</h3><p>${esc(e.intention)}</p>`:""}<h3>Raw first impression</h3><p>${esc(e.impression||"")}</p>${e.details?`<h3>Sensory details</h3><p>${esc(e.details)}</p>`:""}${e.interpretation?`<h3>Personal interpretation</h3><p>${esc(e.interpretation)}</p>`:""}${e.tags?.length?`<p class="tags">${e.tags.map(t=>`<span>${esc(t)}</span>`).join("")}</p>`:""}</article>`).join(""):"<p>No journal entries had been recorded when this archive was created.</p>";
+    const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Quiet Guide Journal</title><style>body{margin:0;background:#fbf6f0;color:#3f3837;font:16px/1.65 system-ui,-apple-system,sans-serif}.page{width:min(780px,calc(100% - 32px));margin:auto;padding:60px 0}header{text-align:center;padding:40px 20px;border-bottom:1px solid #d9c3ae}h1,h2,h3{font-family:Georgia,serif;font-weight:normal;color:#4b3545}h1{font-size:44px;margin:5px}header p,.meta{color:#927f75}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:#b68a42}article{background:#fffdf9;border:1px solid #e4d5c7;border-radius:18px;padding:30px;margin:24px 0;break-inside:avoid}article h2{font-size:28px;margin:6px 0 24px}article h3{font-size:16px;margin:22px 0 5px}.tags{display:flex;gap:7px;flex-wrap:wrap}.tags span{border:1px solid #e0c69b;border-radius:99px;padding:4px 9px;color:#a97968;font-size:12px}@media print{body{background:#fff}.page{width:100%;padding:0}article{box-shadow:none}}</style></head><body><main class="page"><header><span class="eyebrow">Private journal archive</span><h1>The Quiet Guide</h1><p>by Connecting Souls · Exported ${esc(new Date().toLocaleDateString("en-AU",{dateStyle:"long"}))}</p></header>${cards}</main></body></html>`;
+    download(html,"quiet-guide-journal-"+today()+".html","text/html");
+    toast("Readable journal exported");
+  };
+  $("#exportData").onclick=()=>{download(JSON.stringify(backupPayload(),null,2),"quiet-guide-backup-"+today()+".json","application/json");toast("JSON backup exported")};
+  $("#importData").onchange=async e=>{try{const imported=JSON.parse(await e.target.files[0].text());if(!Array.isArray(imported.entries))throw Error();if(confirm("Replace the current local journal with this backup?")){data={entries:imported.entries||[],resources:imported.resources||[],events:imported.events||[],guides:imported.guides||[],quizResults:imported.quizResults||[]};save();render();toast("Backup imported")}}catch{alert("That file does not appear to be a valid Quiet Guide backup.")}e.target.value=""};
+  $("#clearData").onclick=()=>{if(prompt('Type CLEAR MY JOURNAL to continue')==="CLEAR MY JOURNAL"){data=blank();save();render();toast("Local data cleared")}};
+  const initial=location.hash.slice(1);if(initial&&document.getElementById(initial))showView(initial);else render();
+})();
+</script>
+</body>
+</html>
